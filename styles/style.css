@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f5f7fb;
+  text-align: center;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+}
+
+button {
+  background: #4A90E2;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+canvas {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.result-card {
+  background: white;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 10px;
+}
