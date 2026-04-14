@@ -22,6 +22,9 @@
 
   <button onclick="init()">Start Camera</button>
 
+  <!-- 👇 ESTO ES LO QUE TE FALTABA -->
+  <video id="video" autoplay playsinline style="display:none;"></video>
+
   <canvas id="canvas"></canvas>
 
   <div class="result-card">
@@ -30,7 +33,6 @@
     <div id="estadoVoz">Voice not initialized</div>
   </div>
 
-  <!-- Controles tipo Teachable Machine -->
   <div class="controls">
     <button onclick="setLabel('Hello')">Add Hello</button>
     <button onclick="setLabel('Thanks')">Add Thanks</button>
