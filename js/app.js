@@ -31,8 +31,9 @@ function setLabel(label) {
 
 // 🤖 MEDIAPIPE
 const hands = new Hands({
-  locateFile: file =>
-    `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`
+  locateFile: (file) => {
+    return `https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4/${file}`;
+  }
 });
 
 hands.setOptions({
