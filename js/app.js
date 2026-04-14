@@ -99,7 +99,16 @@ const camera = new Camera(videoElement, {
 });
 
 function init() {
-  camera.start();
+  canvas.width = 300;
+  canvas.height = 300;
+
+  camera.start().then(() => {
+    console.log("Camera started");
+  }).catch(err => {
+    console.error("Camera error:", err);
+    document.getElementById("estadoVoz").innerText =
+      "Camera error: " + err.message;
+  });
 }
 
 // 🧠 TRAIN MODEL
