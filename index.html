@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>KineSign</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- MediaPipe -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+
+  <!-- TensorFlow -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+
+<div class="container">
+  <h1>KineSign</h1>
+
+  <button onclick="init()">Start Camera</button>
+
+  <canvas id="canvas"></canvas>
+
+  <div class="result-card">
+    <div id="result">Waiting...</div>
+    <div id="confidence">Confidence: 0%</div>
+    <div id="estadoVoz">Voice not initialized</div>
+  </div>
+
+  <!-- Controles tipo Teachable Machine -->
+  <div class="controls">
+    <button onclick="setLabel('Hello')">Add Hello</button>
+    <button onclick="setLabel('Thanks')">Add Thanks</button>
+    <button onclick="trainModel()">Train</button>
+    <button onclick="saveModel()">Save Model</button>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
