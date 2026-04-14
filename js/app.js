@@ -37,6 +37,7 @@ const hands = new Hands({
 });
 
 hands.setOptions({
+  modelComplexity: 0, // 👈 esto evita el modelo "full"
   maxNumHands: 1,
   minDetectionConfidence: 0.8,
   minTrackingConfidence: 0.8
